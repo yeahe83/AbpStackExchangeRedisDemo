@@ -1,0 +1,864 @@
+2023-01-11 14:52:26.229 +08:00 [INF] Starting console host.
+2023-01-11 14:52:30.075 +08:00 [INF] Loaded ABP modules:
+2023-01-11 14:52:30.077 +08:00 [INF] - App.AppModule
+2023-01-11 14:52:30.077 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 14:52:30.077 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 14:52:30.077 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 14:52:30.077 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 14:52:30.077 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 14:52:30.077 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 14:52:30.077 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 14:52:30.077 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 14:52:30.077 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 14:52:30.077 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 14:52:30.077 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 14:52:30.077 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 14:52:30.077 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 14:52:30.077 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 14:52:30.077 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 14:52:30.077 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 14:52:30.077 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 14:52:30.077 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 14:52:30.077 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 14:52:30.096 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 14:52:30.096 +08:00 [INF] EnvironmentName => Production
+2023-01-11 14:52:30.097 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 14:52:30.277 +08:00 [INF] Hello World!
+2023-01-11 14:52:40.414 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 9s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 9s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 14:52:49.742 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 18s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 18s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.SetManyAsync(IEnumerable`1 items, DistributedCacheEntryOptions options, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass54_0.<<SetManyAsync>g__SetRealCache|0>d.MoveNext()
+2023-01-11 14:52:49.743 +08:00 [INF] SetManyAsync 执行时间：9321 ms
+2023-01-11 14:52:58.976 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 28s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 28s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 14:52:58.978 +08:00 [INF] GetManyAsync 执行时间：9234 ms
+2023-01-11 14:53:03.155 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 32s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 32s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 14:53:03.156 +08:00 [INF] GetOrAddManyAsync 执行时间：4177 ms
+2023-01-11 14:53:12.356 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 41s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 41s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 14:53:12.358 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 14:53:12.366 +08:00 [INF] Hosting environment: Production
+2023-01-11 14:53:12.367 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 14:56:04.700 +08:00 [INF] Application is shutting down...
+2023-01-11 14:56:12.344 +08:00 [INF] Starting console host.
+2023-01-11 14:56:13.086 +08:00 [INF] Loaded ABP modules:
+2023-01-11 14:56:13.089 +08:00 [INF] - App.AppModule
+2023-01-11 14:56:13.089 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 14:56:13.089 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 14:56:13.089 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 14:56:13.089 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 14:56:13.089 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 14:56:13.089 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 14:56:13.089 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 14:56:13.089 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 14:56:13.089 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 14:56:13.089 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 14:56:13.089 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 14:56:13.089 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 14:56:13.089 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 14:56:13.089 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 14:56:13.089 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 14:56:13.089 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 14:56:13.089 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 14:56:13.089 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 14:56:13.089 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 14:56:13.107 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 14:56:13.107 +08:00 [INF] EnvironmentName => Production
+2023-01-11 14:56:13.108 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 14:56:13.304 +08:00 [INF] Hello World!
+2023-01-11 14:56:23.095 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 9s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 9s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 14:56:32.463 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 18s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 18s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.SetManyAsync(IEnumerable`1 items, DistributedCacheEntryOptions options, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass54_0.<<SetManyAsync>g__SetRealCache|0>d.MoveNext()
+2023-01-11 14:56:32.465 +08:00 [INF] SetManyAsync 执行时间：9363 ms
+2023-01-11 14:56:36.653 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 22s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 22s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 14:56:36.655 +08:00 [INF] GetManyAsync 执行时间：4190 ms
+2023-01-11 14:56:45.908 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 32s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 32s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 14:56:45.908 +08:00 [INF] GetOrAddManyAsync 执行时间：9253 ms
+2023-01-11 14:56:55.144 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 41s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 41s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 14:56:55.146 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 14:56:55.154 +08:00 [INF] Hosting environment: Production
+2023-01-11 14:56:55.154 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 15:02:52.849 +08:00 [INF] Application is shutting down...
+2023-01-11 15:02:57.749 +08:00 [INF] Starting console host.
+2023-01-11 15:02:58.525 +08:00 [INF] Loaded ABP modules:
+2023-01-11 15:02:58.526 +08:00 [INF] - App.AppModule
+2023-01-11 15:02:58.527 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 15:02:58.527 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 15:02:58.527 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 15:02:58.527 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 15:02:58.527 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 15:02:58.527 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 15:02:58.527 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 15:02:58.527 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 15:02:58.527 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 15:02:58.527 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 15:02:58.527 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 15:02:58.527 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 15:02:58.527 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 15:02:58.527 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 15:02:58.527 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 15:02:58.527 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 15:02:58.527 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 15:02:58.527 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 15:02:58.527 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 15:02:58.544 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 15:02:58.544 +08:00 [INF] EnvironmentName => Production
+2023-01-11 15:02:58.546 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 15:02:58.727 +08:00 [INF] Hello World!
+2023-01-11 15:03:03.357 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 4s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 4s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 15:03:07.649 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 8s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 8s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.SetManyAsync(IEnumerable`1 items, DistributedCacheEntryOptions options, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass54_0.<<SetManyAsync>g__SetRealCache|0>d.MoveNext()
+2023-01-11 15:03:07.651 +08:00 [INF] SetManyAsync 执行时间：4284 ms
+2023-01-11 15:03:16.849 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 17s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 17s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:03:16.851 +08:00 [INF] GetManyAsync 执行时间：9199 ms
+2023-01-11 15:03:20.977 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 21s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 21s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:03:20.977 +08:00 [INF] GetOrAddManyAsync 执行时间：4126 ms
+2023-01-11 15:03:20.979 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 15:03:20.990 +08:00 [INF] Hosting environment: Production
+2023-01-11 15:03:20.990 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 15:08:30.701 +08:00 [INF] Application is shutting down...
+2023-01-11 15:15:35.856 +08:00 [INF] Starting console host.
+2023-01-11 15:15:37.653 +08:00 [INF] Loaded ABP modules:
+2023-01-11 15:15:37.658 +08:00 [INF] - App.AppModule
+2023-01-11 15:15:37.661 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 15:15:37.665 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 15:15:37.668 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 15:15:37.672 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 15:15:37.676 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 15:15:37.679 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 15:15:37.682 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 15:15:37.685 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 15:15:37.688 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 15:15:37.691 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 15:15:37.694 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 15:15:37.696 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 15:15:37.699 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 15:15:37.702 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 15:15:37.707 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 15:15:37.711 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 15:15:37.716 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 15:15:37.720 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 15:15:37.731 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 15:15:37.734 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 15:15:37.737 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 15:15:37.740 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 15:15:37.742 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 15:15:37.746 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 15:15:37.752 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 15:15:37.779 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 15:15:37.782 +08:00 [INF] EnvironmentName => Production
+2023-01-11 15:15:37.786 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 15:15:38.092 +08:00 [INF] Hello World!
+2023-01-11 15:15:51.876 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 4s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 4s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 15:16:06.748 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 19s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 19s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.SetManyAsync(IEnumerable`1 items, DistributedCacheEntryOptions options, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass54_0.<<SetManyAsync>g__SetRealCache|0>d.MoveNext()
+2023-01-11 15:16:06.749 +08:00 [INF] SetManyAsync 执行时间：4492 ms
+2023-01-11 15:16:16.011 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 28s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 28s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:16:16.012 +08:00 [INF] GetManyAsync 执行时间：9263 ms
+2023-01-11 15:16:20.169 +08:00 [WRN] It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 32s ago, v: 2.2.4.27433
+StackExchange.Redis.RedisConnectionException: It was not possible to connect to the redis server(s). UnableToConnect on 120.77.244.83:6379/Interactive, Initializing/NotStarted, last: NONE, origin: BeginConnectAsync, outstanding: 0, last-read: 2s ago, last-write: 2s ago, keep-alive: 60s, state: Connecting, mgr: 10 of 10 available, last-heartbeat: never, global: 32s ago, v: 2.2.4.27433
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectImplAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 861
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:16:20.169 +08:00 [INF] GetOrAddManyAsync 执行时间：4156 ms
+2023-01-11 15:16:20.171 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 15:16:20.180 +08:00 [INF] Hosting environment: Production
+2023-01-11 15:16:20.182 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 15:32:36.146 +08:00 [INF] Starting console host.
+2023-01-11 15:32:36.855 +08:00 [INF] Loaded ABP modules:
+2023-01-11 15:32:36.857 +08:00 [INF] - App.AppModule
+2023-01-11 15:32:36.857 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 15:32:36.857 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 15:32:36.857 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 15:32:36.857 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 15:32:36.857 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 15:32:36.857 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 15:32:36.857 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 15:32:36.857 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 15:32:36.857 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 15:32:36.857 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 15:32:36.857 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 15:32:36.857 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 15:32:36.857 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 15:32:36.857 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 15:32:36.857 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 15:32:36.857 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 15:32:36.857 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 15:32:36.857 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 15:32:36.857 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 15:32:36.875 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 15:32:36.875 +08:00 [INF] EnvironmentName => Production
+2023-01-11 15:32:36.877 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 15:32:37.058 +08:00 [INF] Hello World!
+2023-01-11 15:32:38.603 +08:00 [INF] SetManyAsync 执行时间：935 ms
+2023-01-11 15:32:38.648 +08:00 [INF] GetManyAsync 执行时间：44 ms
+2023-01-11 15:32:38.667 +08:00 [INF] GetOrAddManyAsync 执行时间：18 ms
+2023-01-11 15:32:38.668 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 15:32:38.675 +08:00 [INF] Hosting environment: Production
+2023-01-11 15:32:38.676 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 15:34:57.189 +08:00 [INF] Application is shutting down...
+2023-01-11 15:38:44.061 +08:00 [INF] Starting console host.
+2023-01-11 15:38:45.923 +08:00 [INF] Loaded ABP modules:
+2023-01-11 15:38:45.928 +08:00 [INF] - App.AppModule
+2023-01-11 15:38:45.931 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 15:38:45.933 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 15:38:45.935 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 15:38:45.940 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 15:38:45.943 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 15:38:45.945 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 15:38:45.947 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 15:38:45.950 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 15:38:45.952 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 15:38:45.955 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 15:38:45.958 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 15:38:45.960 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 15:38:45.962 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 15:38:45.965 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 15:38:45.967 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 15:38:45.970 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 15:38:45.973 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 15:38:45.976 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 15:38:45.979 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 15:38:45.982 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 15:38:46.008 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 15:38:46.011 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 15:38:46.014 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 15:38:46.020 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 15:38:46.023 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 15:38:46.050 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 15:38:46.054 +08:00 [INF] EnvironmentName => Production
+2023-01-11 15:38:46.059 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 15:38:46.475 +08:00 [INF] Hello World!
+2023-01-11 15:39:32.287 +08:00 [INF] SetManyAsync 执行时间：2601 ms
+2023-01-11 15:39:49.970 +08:00 [WRN] Timeout awaiting response (outbound=1244KiB, inbound=908KiB, 5969ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.12,ON_MB___01A相电流,S30, inst: 0, qu: 0, qs: 7332, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 10164, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1244KiB, inbound=908KiB, 5969ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.12,ON_MB___01A相电流,S30, inst: 0, qu: 0, qs: 7332, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 10164, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:39:49.978 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.12,ON_MB___01A相电流,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.12,ON_MB___01A相电流,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 7332
+Redis-Active-Writer = False
+Redis-Read-State = DequeueResult
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 10164
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Manager = 9 of 10 available
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.12,ON_MB___01A相电流,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 15:39:49.990 +08:00 [INF] GetManyAsync 执行时间：6611 ms
+2023-01-11 15:40:13.274 +08:00 [WRN] Timeout awaiting response (outbound=1757KiB, inbound=772KiB, 5922ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2R12.5,ON_YB___12功率因数,S30, inst: 0, qu: 0, qs: 12531, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 5808, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1757KiB, inbound=772KiB, 5922ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2R12.5,ON_YB___12功率因数,S30, inst: 0, qu: 0, qs: 12531, aw: False, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 5808, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:40:13.279 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-UPS.UPS1,ON_UPS___01输入频率,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2R12.5,ON_YB___12功率因数,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 12531
+Redis-Active-Writer = False
+Redis-Read-State = DequeueResult
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 5808
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Manager = 9 of 10 available
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-UPS.UPS1,ON_UPS___01输入频率,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 15:40:13.283 +08:00 [INF] GetOrAddManyAsync 执行时间：6521 ms
+2023-01-11 15:40:24.338 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 15:40:24.371 +08:00 [INF] Hosting environment: Production
+2023-01-11 15:40:24.375 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 15:41:53.763 +08:00 [INF] Starting console host.
+2023-01-11 15:41:54.616 +08:00 [INF] Loaded ABP modules:
+2023-01-11 15:41:54.618 +08:00 [INF] - App.AppModule
+2023-01-11 15:41:54.618 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 15:41:54.618 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 15:41:54.618 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 15:41:54.618 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 15:41:54.618 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 15:41:54.618 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 15:41:54.618 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 15:41:54.618 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 15:41:54.618 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 15:41:54.618 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 15:41:54.618 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 15:41:54.618 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 15:41:54.618 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 15:41:54.618 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 15:41:54.618 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 15:41:54.618 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 15:41:54.619 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 15:41:54.619 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 15:41:54.619 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 15:41:54.619 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 15:41:54.619 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 15:41:54.619 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 15:41:54.619 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 15:41:54.619 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 15:41:54.619 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 15:41:54.638 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 15:41:54.639 +08:00 [INF] EnvironmentName => Production
+2023-01-11 15:41:54.640 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 15:41:54.821 +08:00 [INF] Hello World!
+2023-01-11 15:41:58.949 +08:00 [INF] SetManyAsync 执行时间：2726 ms
+2023-01-11 15:42:05.028 +08:00 [WRN] Timeout awaiting response (outbound=1274KiB, inbound=778KiB, 5578ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-1R4.4,ON_MB___06有功电能,S30, inst: 0, qu: 0, qs: 7775, aw: False, rs: DequeueResult, ws: Idle, in: 1118, in-pipe: 8712, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1274KiB, inbound=778KiB, 5578ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-1R4.4,ON_MB___06有功电能,S30, inst: 0, qu: 0, qs: 7775, aw: False, rs: DequeueResult, ws: Idle, in: 1118, in-pipe: 8712, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:42:05.031 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-1R4.4,ON_MB___06有功电能,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-1R4.4,ON_MB___06有功电能,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 7775
+Redis-Active-Writer = False
+Redis-Read-State = DequeueResult
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 1118
+Redis-Inbound-Pipe-Bytes = 8712
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Manager = 9 of 10 available
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-1R4.4,ON_MB___06有功电能,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 15:42:05.038 +08:00 [INF] GetManyAsync 执行时间：6088 ms，10722 条
+2023-01-11 15:42:11.048 +08:00 [WRN] Timeout awaiting response (outbound=1757KiB, inbound=737KiB, 5516ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-R9.7,ON_YB___02B相电流,S30, inst: 0, qu: 0, qs: 15475, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1757KiB, inbound=737KiB, 5516ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-R9.7,ON_YB___02B相电流,S30, inst: 0, qu: 0, qs: 15475, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 15:42:11.049 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-UPS.UPS1,ON_UPS___01输入频率,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-R9.7,ON_YB___02B相电流,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 15475
+Redis-Active-Writer = False
+Redis-Read-State = ReadAsync
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 0
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Manager = 10 of 10 available
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-UPS.UPS1,ON_UPS___01输入频率,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 15:42:11.050 +08:00 [INF] GetOrAddManyAsync 执行时间：6011 ms，10722 条
+2023-01-11 15:42:11.052 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 15:42:11.061 +08:00 [INF] Hosting environment: Production
+2023-01-11 15:42:11.062 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 16:47:28.021 +08:00 [INF] Application is shutting down...
+2023-01-11 16:50:59.281 +08:00 [INF] Starting console host.
+2023-01-11 16:51:00.215 +08:00 [INF] Loaded ABP modules:
+2023-01-11 16:51:00.218 +08:00 [INF] - App.AppModule
+2023-01-11 16:51:00.219 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 16:51:00.219 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 16:51:00.219 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 16:51:00.219 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 16:51:00.219 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 16:51:00.219 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 16:51:00.219 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 16:51:00.219 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 16:51:00.219 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 16:51:00.219 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 16:51:00.219 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 16:51:00.219 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 16:51:00.219 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 16:51:00.219 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 16:51:00.219 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 16:51:00.219 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 16:51:00.219 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 16:51:00.219 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 16:51:00.219 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 16:51:00.252 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 16:51:00.253 +08:00 [INF] EnvironmentName => Production
+2023-01-11 16:51:00.255 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 16:51:00.519 +08:00 [INF] Hello World!
+2023-01-11 16:51:02.135 +08:00 [INF] SetAsync 执行时间：91 ms
+2023-01-11 16:51:02.229 +08:00 [INF] GetAsync 执行时间：52 ms，值为：{"Id":"00000000-0000-0000-0000-000000000000","EnterpriseCode":"TLM","SpecialtyCategory":101,"DeviceNumber":"SUB1-UPS.UPS1","ParamDictNumber":"ON_UPS___01输入频率","RecordDate":"2023-01-11T16:51:01.0870441+08:00","RecordValue":"123.45"}
+2023-01-11 16:51:04.061 +08:00 [INF] SetManyAsync 执行时间：1832 ms
+2023-01-11 16:51:10.139 +08:00 [WRN] Timeout awaiting response (outbound=1215KiB, inbound=899KiB, 5422ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.9,ON_MB___15接触器位置,S30, inst: 0, qu: 0, qs: 7366, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1215KiB, inbound=899KiB, 5422ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.9,ON_MB___15接触器位置,S30, inst: 0, qu: 0, qs: 7366, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:51:10.144 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.9,ON_MB___15接触器位置,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.9,ON_MB___15接触器位置,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 7366
+Redis-Active-Writer = False
+Redis-Read-State = ReadAsync
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 0
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Manager = 9 of 10 available
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB2-2L4.9,ON_MB___15接触器位置,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 16:51:10.153 +08:00 [INF] GetManyAsync 执行时间：6091 ms，10722 条
+2023-01-11 16:51:16.150 +08:00 [WRN] Timeout awaiting response (outbound=1757KiB, inbound=697KiB, 5344ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-R10.7,ON_YB___09有功功率,S30, inst: 0, qu: 0, qs: 15306, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1757KiB, inbound=697KiB, 5344ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-R10.7,ON_YB___09有功功率,S30, inst: 0, qu: 0, qs: 15306, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, mgr: 10 of 10 available, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:51:16.150 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-UPS.UPS1,ON_UPS___01输入频率,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-R10.7,ON_YB___09有功功率,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 15306
+Redis-Active-Writer = False
+Redis-Read-State = ReadAsync
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 0
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Manager = 10 of 10 available
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,SUB1-UPS.UPS1,ON_UPS___01输入频率,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 16:51:16.152 +08:00 [INF] GetOrAddManyAsync 执行时间：5998 ms，10722 条
+2023-01-11 16:51:16.154 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 16:51:16.166 +08:00 [INF] Hosting environment: Production
+2023-01-11 16:51:16.167 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 16:51:28.011 +08:00 [INF] Application is shutting down...
+2023-01-11 16:53:04.159 +08:00 [INF] Starting console host.
+2023-01-11 16:53:05.017 +08:00 [INF] Loaded ABP modules:
+2023-01-11 16:53:05.019 +08:00 [INF] - App.AppModule
+2023-01-11 16:53:05.019 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 16:53:05.019 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 16:53:05.019 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 16:53:05.019 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 16:53:05.020 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 16:53:05.020 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 16:53:05.020 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 16:53:05.020 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 16:53:05.020 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 16:53:05.020 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 16:53:05.020 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 16:53:05.020 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 16:53:05.020 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 16:53:05.020 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 16:53:05.020 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 16:53:05.020 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 16:53:05.020 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 16:53:05.020 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 16:53:05.020 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 16:53:05.020 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 16:53:05.020 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 16:53:05.020 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 16:53:05.020 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 16:53:05.020 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 16:53:05.020 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 16:53:05.059 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 16:53:05.059 +08:00 [INF] EnvironmentName => Production
+2023-01-11 16:53:05.061 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 16:53:05.321 +08:00 [INF] Hello World!
+2023-01-11 16:53:06.203 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 16:53:06.308 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.SetAsync(String key, Byte[] value, DistributedCacheEntryOptions options, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass51_0.<<SetAsync>g__SetRealCache|0>d.MoveNext()
+2023-01-11 16:53:06.308 +08:00 [INF] SetAsync 执行时间：98 ms
+2023-01-11 16:53:06.317 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetAsync(TCacheKey key, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:53:06.341 +08:00 [INF] GetAsync 执行时间：8 ms，值为：null
+2023-01-11 16:53:06.514 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.SetManyAsync(IEnumerable`1 items, DistributedCacheEntryOptions options, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass54_0.<<SetManyAsync>g__SetRealCache|0>d.MoveNext()
+2023-01-11 16:53:06.514 +08:00 [INF] SetManyAsync 执行时间：172 ms
+2023-01-11 16:53:06.524 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:53:06.527 +08:00 [INF] GetManyAsync 执行时间：13 ms，10722 条
+2023-01-11 16:53:06.538 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:53:06.539 +08:00 [INF] GetOrAddManyAsync 执行时间：11 ms，10722 条
+2023-01-11 16:53:06.541 +08:00 [WRN] No endpoints specified (Parameter 'configuration')
+System.ArgumentException: No endpoints specified (Parameter 'configuration')
+   at StackExchange.Redis.ConnectionMultiplexer.PrepareConfig(Object configuration, Boolean sentinel) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 917
+   at StackExchange.Redis.ConnectionMultiplexer.ConnectAsync(ConfigurationOptions configuration, TextWriter log) in /_/src/StackExchange.Redis/ConnectionMultiplexer.cs:line 893
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.ConnectAsync(CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.RemoveManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.<>c__DisplayClass63_0.<<RemoveManyAsync>g__RemoveRealCache|0>d.MoveNext()
+2023-01-11 16:53:06.543 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 16:53:06.555 +08:00 [INF] Hosting environment: Production
+2023-01-11 16:53:06.555 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 16:55:15.906 +08:00 [INF] Application is shutting down...
+2023-01-11 16:55:32.878 +08:00 [INF] Starting console host.
+2023-01-11 16:55:33.820 +08:00 [INF] Loaded ABP modules:
+2023-01-11 16:55:33.822 +08:00 [INF] - App.AppModule
+2023-01-11 16:55:33.822 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 16:55:33.822 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 16:55:33.822 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 16:55:33.822 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 16:55:33.822 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 16:55:33.822 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 16:55:33.822 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 16:55:33.822 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 16:55:33.822 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 16:55:33.822 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 16:55:33.822 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 16:55:33.822 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 16:55:33.822 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 16:55:33.822 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 16:55:33.822 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 16:55:33.822 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 16:55:33.822 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 16:55:33.823 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 16:55:33.823 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 16:55:33.823 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 16:55:33.823 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 16:55:33.823 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 16:55:33.823 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 16:55:33.823 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 16:55:33.823 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 16:55:33.846 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 16:55:33.846 +08:00 [INF] EnvironmentName => Production
+2023-01-11 16:55:33.847 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 16:55:34.118 +08:00 [INF] Hello World!
+2023-01-11 16:55:35.832 +08:00 [INF] SetAsync 执行时间：108 ms
+2023-01-11 16:55:35.932 +08:00 [INF] GetAsync 执行时间：57 ms，值为：{"Id":"00000000-0000-0000-0000-000000000000","EnterpriseCode":"TLM","SpecialtyCategory":101,"DeviceNumber":"SUB1-UPS.UPS1","ParamDictNumber":"ON_UPS___01输入频率","RecordDate":"2023-01-11T16:55:34.6262178+08:00","RecordValue":"123.45"}
+2023-01-11 16:55:37.898 +08:00 [INF] SetManyAsync 执行时间：1965 ms
+2023-01-11 16:55:58.141 +08:00 [WRN] Timeout awaiting response (outbound=1242KiB, inbound=2839KiB, 20109ms elapsed, timeout is 20000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36077,ON_YC___02无功功率Q,S30, inst: 0, qu: 0, qs: 94, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=1242KiB, inbound=2839KiB, 20109ms elapsed, timeout is 20000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36077,ON_YC___02无功功率Q,S30, inst: 0, qu: 0, qs: 94, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetManyAsync(IEnumerable`1 keys, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:55:58.153 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36077,ON_YC___02无功功率Q,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36077,ON_YC___02无功功率Q,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 94
+Redis-Active-Writer = False
+Redis-Read-State = ReadAsync
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 0
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36077,ON_YC___02无功功率Q,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 16:55:58.160 +08:00 [INF] GetManyAsync 执行时间：20262 ms，10722 条
+2023-01-11 16:56:19.072 +08:00 [WRN] Timeout awaiting response (outbound=421KiB, inbound=2810KiB, 20812ms elapsed, timeout is 20000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36067,ON_YC___04频率Fr,S30, inst: 0, qu: 0, qs: 187, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=421KiB, inbound=2810KiB, 20812ms elapsed, timeout is 20000ms), command=HMGET, next: HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36067,ON_YC___04频率Fr,S30, inst: 0, qu: 0, qs: 187, aw: False, rs: ReadAsync, ws: Idle, in: 0, in-pipe: 0, out-pipe: 0, serverEndpoint: 120.77.244.83:6379, mc: 1/1/0, clientName: DESKTOP-AA8GB5L, IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=4,Max=32767), v: 2.2.4.27433 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisExtensions.HashMemberGetManyAsync(IDatabase cache, String[] keys, String[] members)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetAndRefreshManyAsync(IEnumerable`1 keys, Boolean getData, CancellationToken token)
+   at Volo.Abp.Caching.StackExchangeRedis.AbpRedisCache.GetManyAsync(IEnumerable`1 keys, CancellationToken token)
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddManyAsync(IEnumerable`1 keys, Func`2 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+2023-01-11 16:56:19.073 +08:00 [WRN] ---------- Exception Data ----------
+Redis-Message = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36067,ON_YC___04频率Fr,S30
+Redis-Message-Next = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36067,ON_YC___04频率Fr,S30
+Redis-OpsSinceLastHeartbeat = 0
+Redis-Queue-Awaiting-Write = 0
+Redis-Queue-Awaiting-Response = 187
+Redis-Active-Writer = False
+Redis-Read-State = ReadAsync
+Redis-Write-State = Idle
+Redis-Inbound-Bytes = 0
+Redis-Inbound-Pipe-Bytes = 0
+Redis-Outbound-Pipe-Bytes = 0
+Redis-Server-Endpoint = 120.77.244.83:6379
+Redis-Multiplexer-Connects = 1/1/0
+Redis-Client-Name = DESKTOP-AA8GB5L
+Redis-ThreadPool-IO-Completion = (Busy=0,Free=1000,Min=1,Max=1000)
+Redis-ThreadPool-Workers = (Busy=1,Free=32766,Min=4,Max=32767)
+Redis-Busy-Workers = 1
+Redis-Version = 2.2.4.27433
+redis-command = HMGET c:HNSC.CL.II.HisData.RealtimeOnlines.RealtimeOnline,k:162.HNSC.VOC.IITLM,QingT-36067,ON_YC___04频率Fr,S30
+request-sent-status = Sent
+redis-server = 120.77.244.83:6379
+
+2023-01-11 16:56:19.074 +08:00 [INF] GetOrAddManyAsync 执行时间：20913 ms，10722 条
+2023-01-11 16:56:19.625 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 16:56:19.636 +08:00 [INF] Hosting environment: Production
+2023-01-11 16:56:19.636 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 16:56:42.013 +08:00 [INF] Application is shutting down...
+2023-01-11 16:56:47.381 +08:00 [INF] Starting console host.
+2023-01-11 16:56:48.250 +08:00 [INF] Loaded ABP modules:
+2023-01-11 16:56:48.253 +08:00 [INF] - App.AppModule
+2023-01-11 16:56:48.253 +08:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2023-01-11 16:56:48.253 +08:00 [INF]     - Volo.Abp.Castle.AbpCastleCoreModule
+2023-01-11 16:56:48.253 +08:00 [INF]   - Volo.Abp.Caching.AbpCachingModule
+2023-01-11 16:56:48.253 +08:00 [INF]     - Volo.Abp.Threading.AbpThreadingModule
+2023-01-11 16:56:48.253 +08:00 [INF]     - Volo.Abp.Serialization.AbpSerializationModule
+2023-01-11 16:56:48.253 +08:00 [INF]     - Volo.Abp.Uow.AbpUnitOfWorkModule
+2023-01-11 16:56:48.253 +08:00 [INF]     - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2023-01-11 16:56:48.253 +08:00 [INF]       - Volo.Abp.Data.AbpDataModule
+2023-01-11 16:56:48.253 +08:00 [INF]         - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2023-01-11 16:56:48.253 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2023-01-11 16:56:48.253 +08:00 [INF]           - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2023-01-11 16:56:48.253 +08:00 [INF]         - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2023-01-11 16:56:48.253 +08:00 [INF]       - Volo.Abp.Security.AbpSecurityModule
+2023-01-11 16:56:48.253 +08:00 [INF]     - Volo.Abp.Json.AbpJsonModule
+2023-01-11 16:56:48.254 +08:00 [INF]       - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2023-01-11 16:56:48.254 +08:00 [INF]         - Volo.Abp.Json.AbpJsonAbstractionsModule
+2023-01-11 16:56:48.254 +08:00 [INF]         - Volo.Abp.Timing.AbpTimingModule
+2023-01-11 16:56:48.254 +08:00 [INF]           - Volo.Abp.Localization.AbpLocalizationModule
+2023-01-11 16:56:48.254 +08:00 [INF]             - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2023-01-11 16:56:48.254 +08:00 [INF]             - Volo.Abp.Settings.AbpSettingsModule
+2023-01-11 16:56:48.254 +08:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2023-01-11 16:56:48.254 +08:00 [INF]   - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2023-01-11 16:56:48.254 +08:00 [INF]   - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2023-01-11 16:56:48.254 +08:00 [INF]     - Volo.Abp.Auditing.AbpAuditingModule
+2023-01-11 16:56:48.254 +08:00 [INF]       - Volo.Abp.Auditing.AbpAuditingContractsModule
+2023-01-11 16:56:48.279 +08:00 [INF] MySettingName => MySettingValue
+2023-01-11 16:56:48.280 +08:00 [INF] EnvironmentName => Production
+2023-01-11 16:56:48.282 +08:00 [INF] Initialized all ABP modules.
+2023-01-11 16:56:48.537 +08:00 [INF] Hello World!
+2023-01-11 16:56:50.070 +08:00 [INF] SetAsync 执行时间：102 ms
+2023-01-11 16:56:50.148 +08:00 [INF] GetAsync 执行时间：39 ms，值为：{"Id":"00000000-0000-0000-0000-000000000000","EnterpriseCode":"TLM","SpecialtyCategory":101,"DeviceNumber":"SUB1-UPS.UPS1","ParamDictNumber":"ON_UPS___01输入频率","RecordDate":"2023-01-11T16:56:49.075733+08:00","RecordValue":"123.45"}
+2023-01-11 16:56:51.354 +08:00 [INF] SetManyAsync 执行时间：1206 ms
+2023-01-11 16:57:12.416 +08:00 [INF] GetManyAsync 执行时间：21061 ms，10722 条
+2023-01-11 16:57:33.753 +08:00 [INF] GetOrAddManyAsync 执行时间：21336 ms，10722 条
+2023-01-11 16:57:34.236 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-01-11 16:57:34.246 +08:00 [INF] Hosting environment: Production
+2023-01-11 16:57:34.247 +08:00 [INF] Content root path: C:\Users\yeahe83\Documents\Dev\demo\AbpStackExchangeRedisDemo\src\App
+2023-01-11 17:00:58.310 +08:00 [INF] Application is shutting down...
