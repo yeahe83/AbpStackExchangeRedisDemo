@@ -32,6 +32,15 @@ public class HelloWorldService : ITransientDependency
     {
         Logger.LogInformation("Hello World!");
 
+        for (var i = 0; i < 5; i++)
+        {
+            Logger.LogInformation($"=========== {i} ===========");
+            await RunRedisTestAsync();
+        }
+    }
+
+    private async Task RunRedisTestAsync()
+    {
         // 读取参数表
         var bigMappingsStr = await File.ReadAllTextAsync("bigMappings.json");
         BasicRedisDto basicRedisDto = JsonConvert.DeserializeObject<BasicRedisDto>(bigMappingsStr);

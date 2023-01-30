@@ -43,8 +43,9 @@ public class AppModule : AbpModule
 
         Configure<RedisCacheOptions>(options =>
         {
-            // options.Configuration = "192.168.1.165:30379";
-            var redisConfig = ConfigurationOptions.Parse("192.168.1.165:30379");
+            // var configuration = "192.168.1.150:6379";
+            var configuration = "192.168.1.165:30379";
+            var redisConfig = ConfigurationOptions.Parse(configuration);
             redisConfig.SocketManager = SocketManager.ThreadPool;
             redisConfig.SyncTimeout = 50000;
             options.ConfigurationOptions = redisConfig;
